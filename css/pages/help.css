@@ -1,0 +1,58 @@
+.formulario {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.formulario > ul > li > label {
+    margin-bottom: 5px;
+}
+
+.formulario > ul > li > input {
+    margin: 5px;
+    padding: 5px;
+    margin-left: 0px;
+    width: 300px;
+}
+
+.botones {
+    align-items: center;
+    justify-content: center;
+    border: 1px;
+    color: #ffff;
+    background-color: #00594c;
+    border-radius: 7px;
+    padding: 11px;
+    width: 80px;
+}
+
+#clearbutton {
+    margin-left: 70px;
+}
+
+#mensaje {
+    margin: 5px;
+    padding: 5px;
+    margin-left: 0px;
+    width: 300px;
+    height: 100px;
+}
+
+.informacion {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.parrafo {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #ffff;
+    background-color: #dc3545;
+    border-radius: 15px;
+    margin: 35px 10px 10px 10px;
+    padding: 15px;
+    padding-bottom: 0px;
+    width: 400px;
+}

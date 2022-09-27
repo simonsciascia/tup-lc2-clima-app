@@ -2,29 +2,31 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-:root {
-    /* declaro variables css con colores principales */
-    --color-them: #00594c;
-    --color-active: #5df2d6;
-    --color-back-active: #04957d;
-    --color-gradient: linear-gradient(to right, var(var(--color-them)), var(var(--color-back-active)));
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida SansUnicode',
+    Geneva, Verdana, sans-serif;
 }
 
-body{
-    height:100%;
+:root {
+    /* Declaro variables CSS con colores principales */
+    --color-theme: #00594c;
+    --color-active: #5df2d6;
+    --color-back-active: #04957d;
+    --color-gradient: linear-gradient(to right, var(--color-theme), var(--color-back-active));
+}
+
+body {
+    height: 100%;
     width: 100%;
 }
 
-ul{
+
+ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-button,
-a {
+button, a {
     user-select: none;
     -webkit-user-select: none;
 }
@@ -33,20 +35,20 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    justify-content: space-between;
-    justify-content: center;
-    background: var(--color-them);
-
+    background: linear-gradient(to right, var(--color-theme), var(--color-back-active));
+    border-radius: 0px 0px 30px 30px;
 }
 
-nav>ul{
+nav>ul {
     display: flex;
     justify-content: space-between;
     justify-content: center;
+    margin-top: 7px;
 }
 
-nav>li{
-    flex: 0 0 auto;
+nav li {
+    flex:
+        0 0 auto;
 }
 
 nav li a {
@@ -54,24 +56,25 @@ nav li a {
     padding: 16px 12px;
     text-align: center;
     text-decoration: none;
-    font-size: lem;
+    font-size: 1em;
     font-weight: bold;
     color: var(--color-active);
-
 }
 
 nav li.current-page a {
-    color: (var(--color-them));
+    color: var(--color-theme);
     background-color: var(--color-active);
     pointer-events: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
-main{
-    margin-top: 120px;
+main {
+    margin-top: 100px;
     overflow: auto;
     padding: 16px;
     padding-bottom: 60px;
-    height: calc(100% - 120px);
+    height: calc (100% - 100px);
 }
 
 h1 {
@@ -80,15 +83,20 @@ h1 {
     color: white;
 }
 
-h1>img{
+h1>img {
     width: 70px;
     vertical-align: middle;
 }
 
-h2{
-    color: var(--color-them);
+h2 {
+    color: var(--color-theme);
     margin: 16px 0;
     text-align: center;
+}
+
+h3 {
+    color: var(--color-theme);
+    margin: 8px 0;
 }
 
 main section {
@@ -96,10 +104,10 @@ main section {
     justify-content: space-around;
 }
 
-footer{
+footer {
     position: fixed;
     bottom: 0px;
-    background: var(--color-them);
+    background: linear-gradient(to right, var(--color-theme), var(--color-back-active));
     width: 100%;
     text-align: center;
     padding-top: 10px;
@@ -114,16 +122,16 @@ footer p {
 main p {
     margin-bottom: 16px;
 }
-/* media query: estilos a aplicar solo en pantallas mayores a 400px */
-@media (min-width 400px) {
-    main{
+
+/* Media Query: Estilos a aplicar sólo en pantallas mayores a 400px */
+@media (min-width: 400px) {
+    main {
         padding-left: 10%;
         padding-right: 10%;
     }
-    footer{
+
+    footer {
         padding-top: 20px;
         padding-bottom: 20px;
     }
 }
-
-
